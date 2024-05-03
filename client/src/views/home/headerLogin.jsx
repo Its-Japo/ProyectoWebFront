@@ -18,7 +18,6 @@ function HeaderLogin() {
           position: "absolute",
           right: "10px",
           top: "15px",
-          color: "white",
           fontSize: "20px",
           textDecoration: "none",
           backgroundColor: "#fff7c7",
