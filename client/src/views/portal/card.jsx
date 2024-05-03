@@ -43,7 +43,7 @@ function Card({id, titleP, contentP, imageP}) {
 
     async function deletePost() {
         try {
-            const response = await fetch(`http://localhost:3030/posts/${idG}`, {
+            const response = await fetch(`http://54.208.221.81:3030/posts/${idG}`, {
                 method: 'DELETE',
                 headers: {
                     'x-auth-token': localStorage.getItem('token'),
@@ -64,7 +64,7 @@ function Card({id, titleP, contentP, imageP}) {
     async function updatePost() {
         convertFileToBase64(async(base64String) => {
             values.imageForm = base64String;
-            await fetch(`http://localhost:3030/posts/${idG}`, {
+            await fetch(`http://54.208.221.81:3030/posts/${idG}`, {
                 method: 'PUT',
                 headers: {
                     'x-auth-token': localStorage.getItem('token'),

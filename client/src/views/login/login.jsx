@@ -5,7 +5,7 @@ function Login() {
     const { values, handleChange, handleSubmit } = useForm({ uname: '', password: ''});
 
     const login = async () => {
-      const response = await fetch("http://localhost:3030/admin", {
+      const response = await fetch("http://54.208.221.81:3030/admin", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -6,7 +6,7 @@ import Loading from "../../components/loading";
 function Post({postId}) {
   let idElemento = postId ? postId : null;
 
-  const { data, error, loading } = useApi(`http://localhost:3030/posts/${idElemento}`);
+  const { data, error, loading } = useApi(`http://54.208.221.81:3030/posts/${idElemento}`);
 
   const loadPost = useCallback(async() => {
     if (data) {
