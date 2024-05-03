@@ -2,11 +2,11 @@ import Card from './card';
 import Loading from '../../components/loading';
 import useApi from '../../hooks/useApi';
 import useForm from '../../hooks/useForm';
-import React, { lazy, Suspense } from 'react';
+import { Suspense } from 'react';
 
 function Dashboard() {
 
-    const { data, error, loading } = useApi('http://54.208.221.81:3030/posts');
+    const { data, error, loading } = useApi('http://localhost:3030/posts');
 
     const { values, handleChange, handleSubmit } = useForm({
         title: '',
@@ -39,7 +39,7 @@ function Dashboard() {
         convertFileToBase64(async(base64String) => {
             values.image = base64String;
 
-            await fetch('http://54.208.221.81:3030/posts', {
+            await fetch('http://localhost:3030/posts', {
             method: 'POST',
             headers: {
                 'x-auth-token': localStorage.getItem('token'),

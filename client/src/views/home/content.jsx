@@ -9,7 +9,7 @@ function Content() {
   const [post, setPost] = useState(1);
 
   async function fetchPosts() {
-    let posts = await fetch("http://54.208.221.81:3030/posts").then((res) =>
+    let posts = await fetch("http://localhost:3030/posts").then((res) =>
       res.json()
     );
     setPosts(posts);
