@@ -8,7 +8,7 @@ function Content() {
   
   const { data, error, loading } = useApi('https://proyectowebback.onrender.com/posts');
   
-  const [postIndex, setPostIndex] = useState(1);
+  const [postIndex, setPostIndex] = useState(2);
 
     if (loading) {
       return (
