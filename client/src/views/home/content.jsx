@@ -9,7 +9,7 @@ function Content() {
   const [post, setPost] = useState(1);
 
   async function fetchPosts() {
-    let posts = await fetch("https://proyectowebback.onrender.com:3030/posts").then((res) =>
+    let posts = await fetch("https://proyectowebback.onrender.com/posts").then((res) =>
       res.json()
     );
     setPosts(posts);

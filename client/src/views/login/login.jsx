@@ -5,7 +5,7 @@ function Login() {
     const { values, handleChange, handleSubmit } = useForm({ uname: '', password: ''});
 
     const login = async () => {
-      const response = await fetch("https://proyectowebback.onrender.com:3030/admin", {
+      const response = await fetch("https://proyectowebback.onrender.com/admin", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

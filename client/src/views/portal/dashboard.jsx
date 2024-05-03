@@ -6,7 +6,7 @@ import { Suspense } from 'react';
 
 function Dashboard() {
 
-    const { data, error, loading } = useApi('https://proyectowebback.onrender.com:3030/posts');
+    const { data, error, loading } = useApi('https://proyectowebback.onrender.com/posts');
 
     const { values, handleChange, handleSubmit } = useForm({
         title: '',
@@ -39,7 +39,7 @@ function Dashboard() {
         convertFileToBase64(async(base64String) => {
             values.image = base64String;
 
-            await fetch('https://proyectowebback.onrender.com:3030/posts', {
+            await fetch('https://proyectowebback.onrender.com/posts', {
             method: 'POST',
             headers: {
                 'x-auth-token': localStorage.getItem('token'),

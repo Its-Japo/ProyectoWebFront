@@ -6,7 +6,7 @@ import Loading from "../../components/loading";
 function Post({postId}) {
   let idElemento = postId ? postId : null;
 
-  const { data, error, loading } = useApi(`https://proyectowebback.onrender.com:3030/posts/${idElemento}`);
+  const { data, error, loading } = useApi(`https://proyectowebback.onrender.com/posts/${idElemento}`);
 
   const loadPost = useCallback(async() => {
     if (data) {
